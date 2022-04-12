@@ -1,7 +1,8 @@
 # flutter_android_battery_level
 
-A new Flutter project.
+A Flutter Platform-Specific project.
 
+- Kotlin (Android).
 ## Getting Started
 
 This project is a starting point for a Flutter application.
