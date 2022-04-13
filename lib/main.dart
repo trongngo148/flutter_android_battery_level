@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_android_battery_level/pigeon.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +51,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  _getMessage() async {
+    final retrieved = await MessageApi().getMessage("jonathan@gmail.com");
+    print(retrieved);
+  }
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -70,6 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
               _batteryLevel,
               style: Theme.of(context).textTheme.headline4,
             ),
+            MaterialButton(
+              onPressed: _getMessage,
+              child: Text("Text"),
+              color: Colors.red,
+            )
           ],
         ),
       ),
